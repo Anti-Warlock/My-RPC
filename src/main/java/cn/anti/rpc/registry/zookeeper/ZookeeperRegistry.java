@@ -1,5 +1,6 @@
 package cn.anti.rpc.registry.zookeeper;
 
+import cn.anti.rpc.model.ServiceMetaData;
 import cn.anti.rpc.registry.ServiceRegistry;
 import com.alibaba.nacos.api.naming.pojo.Instance;
 
@@ -14,12 +15,13 @@ public class ZookeeperRegistry implements ServiceRegistry {
 
 
     @Override
-    public void register(String serviceName, Instance instance) {
+    public void register(ServiceMetaData serviceMetaData) throws Exception {
 
     }
 
     @Override
     public List<Instance> getServiceList(String serviceName, List<String> clusters) {
+
         return null;
     }
 }

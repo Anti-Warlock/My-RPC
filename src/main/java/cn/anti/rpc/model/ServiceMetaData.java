@@ -14,5 +14,5 @@ public class ServiceMetaData {
 
     private Integer version;
 
-    private Class serviceClass;
+    private Class<?> clazz;
 }

@@ -1,9 +1,7 @@
 package cn.anti.rpc.registry;
 
-
+import cn.anti.rpc.model.ServiceMetaData;
 import com.alibaba.nacos.api.naming.pojo.Instance;
-
-import java.net.InetSocketAddress;
 import java.util.List;
 
 /**
@@ -14,11 +12,11 @@ import java.util.List;
 public interface ServiceRegistry {
 
     /**
-     * 根据服务名和服务实例注册到注册中心
-     * @param serviceName
-     * @param instance
+     * 根据服务元数据注册到注册中心
+     * @param serviceMetaData
+     * @throws Exception
      */
-    void register(String serviceName, Instance instance);
+    void register(ServiceMetaData serviceMetaData)throws Exception;
 
     /**
      * 根据服务名和集群获取全部实例
@@ -27,5 +25,7 @@ public interface ServiceRegistry {
      * @return
      */
     List<Instance> getServiceList(String serviceName,List<String> clusters);
+
+
 
 }

@@ -1,6 +1,7 @@
 package cn.anti.rpc.registry.nacos;
 
 
+import cn.anti.rpc.model.ServiceMetaData;
 import cn.anti.rpc.registry.ServiceRegistry;
 import cn.hutool.core.collection.CollectionUtil;
 import com.alibaba.nacos.api.exception.NacosException;
@@ -31,13 +32,19 @@ public class NacosRegistry implements ServiceRegistry {
         }
     }
 
+//    @Override
+//    public void register(String serviceName, Instance instance) {
+//        try {
+//            namingService.registerInstance(serviceName,instance);
+//        } catch (NacosException e) {
+//            log.error("服务注册失败:{}",e.getErrMsg());
+//        }
+//    }
+
     @Override
-    public void register(String serviceName, Instance instance) {
-        try {
-            namingService.registerInstance(serviceName,instance);
-        } catch (NacosException e) {
-            log.error("服务注册失败:{}",e.getErrMsg());
-        }
+    public void register(ServiceMetaData serviceMetaData) throws Exception {
+        Instance instance = new Instance();
+        namingService.registerInstance(serviceMetaData.getServiceName(),instance);
     }
 
     @Override
