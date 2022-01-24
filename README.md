@@ -81,12 +81,12 @@ wsl Ubuntu-20.04
    zkServer.sh start 
 ```
 2.启动三个服务端和一个客户端,平滑加权轮询算法:
-![Image text]()  
+![Image text](https://github.com/Anti-Warlock/My-RPC/blob/master/src/main/resources/img-folder/start.png)  
 3.使用ab进行压力测试,4个线程发送10000个请求:
 ```bash
     ab -c 4 -n 1000 http://localhost:8081/test/user?id=1
 ```
-![Image text]()
+![Image text](https://github.com/Anti-Warlock/My-RPC/blob/master/src/main/resources/img-folder/test.png)
 
 
 
