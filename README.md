@@ -6,7 +6,7 @@
 # 食用不完全指北
 1.clone代码到本地
 ```bash
-git clone 
+git clone git@github.com:Anti-Warlock/My-RPC.git
 ```
 2.打包到本地maven仓库
 ```bash
@@ -81,11 +81,12 @@ wsl Ubuntu-20.04
    zkServer.sh start 
 ```
 2.启动三个服务端和一个客户端,平滑加权轮询算法:
-![Image text]()
+![Image text]()  
 3.使用ab进行压力测试,4个线程发送10000个请求:
 ```bash
     ab -c 4 -n 1000 http://localhost:8081/test/user?id=1
 ```
+![Image text]()
 
 
 
