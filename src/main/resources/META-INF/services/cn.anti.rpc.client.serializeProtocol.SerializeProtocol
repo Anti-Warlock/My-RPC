@@ -1,0 +1,3 @@
+cn.anti.rpc.client.serializeProtocol.JavaSerializeProtocol
+cn.anti.rpc.client.serializeProtocol.ProtoBufSerializeProtocol
+cn.anti.rpc.client.serializeProtocol.HessianSerializeProtocol

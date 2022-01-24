@@ -2,18 +2,16 @@ package cn.anti.rpc.annotation;
 
 import org.springframework.stereotype.Component;
 
-import java.lang.annotation.ElementType;
-import java.lang.annotation.Retention;
-import java.lang.annotation.RetentionPolicy;
-import java.lang.annotation.Target;
+import java.lang.annotation.*;
 
 /**
  * 被此注解标记的服务可提供远程RPC访问功能
  * @author zhuyusheng
  * @date 2020/7/15
  */
-@Target(ElementType.FIELD)
+@Target({ElementType.TYPE})
 @Retention(RetentionPolicy.RUNTIME)
+@Documented
 @Component
 public @interface RpcServer {
     String name() default "";

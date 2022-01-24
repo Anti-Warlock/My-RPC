@@ -10,9 +10,33 @@ import lombok.Data;
 @Data
 public class ServiceMetaData {
 
+    /**
+     * 服务名称
+     */
     private String serviceName;
 
-    private Integer version;
+//    /**
+//     * 服务IP
+//     */
+//    private String ip;
+//
+//    /**
+//     * 服务端口
+//     */
+//    private Integer port;
+//
+//    /**
+//     * 服务版本
+//     */
+//    private Integer version;
 
+    /**
+     * 服务Class
+     */
     private Class<?> clazz;
+
+    /**
+     * 具体服务
+     */
+    private Object obj;
 }

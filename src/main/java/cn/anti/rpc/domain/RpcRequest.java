@@ -3,6 +3,8 @@ package cn.anti.rpc.domain;
 import lombok.Data;
 
 import java.io.Serializable;
+import java.util.HashMap;
+import java.util.Map;
 
 /**
  * @author zhuyusheng
@@ -12,9 +14,13 @@ import java.io.Serializable;
 public class RpcRequest implements Serializable {
 
     /**
-     * 服务类名
+     * 请求ID
      */
-    private String className;
+    private String requestId;
+    /**
+     * 服务名
+     */
+    private String serviceName;
 
     /**
      * 方法名
@@ -30,4 +36,6 @@ public class RpcRequest implements Serializable {
      * 参数类型
      */
     private Class<?>[] parameterTypes;
+
+    private Map<String,String> headers = new HashMap<>();
 }
